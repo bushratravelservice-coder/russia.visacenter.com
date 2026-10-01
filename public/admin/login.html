@@ -1,0 +1,11 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin Login — RUSSIA.VISACENTER.COM</title><link rel="stylesheet" href="../style.css"></head>
+<body class="admin-bg"><main class="login"><div class="login-logo"><span>RV</span><b>RUSSIA.VISACENTER.COM</b></div><div class="card"><small class="eyebrow">PRIVATE ADMIN AREA</small><h1>Admin Login</h1><p>Authorized administrator access only.</p><label>Email</label><input id="email" type="email" value="BUSHRATRAVELSERVICE@GMAIL.COM"><label>Password</label><input id="password" type="password" placeholder="Enter your password"><button class="btn red full" onclick="login()">Login →</button><p id="error" class="error"></p><a href="../index.html" class="back">← Back to website</a></div></main><script>
+function login(){
+ const e=document.getElementById('email').value.trim().toLowerCase(), p=document.getElementById('password').value;
+ if(!p){document.getElementById('error').textContent='Enter your password.';return;}
+ // Demo gate only. Replace with server-side authentication before production.
+ if(e==='bushatravelservice@gmail.com' || e==='bushatravelservice@gmail.com'){window.location='dashboard.html';}
+ else{document.getElementById('error').textContent='Use the configured admin email.';}
+}
+</script></body></html>
